@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Login from './Pages/Login';
 import Comidas from './Pages/Comidas';
+import Login from './Pages/Login';
 
 function App() {
   return (
