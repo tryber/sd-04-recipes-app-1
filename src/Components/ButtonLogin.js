@@ -4,8 +4,7 @@ import { connect } from 'react-redux';
 import saveToLocalStorage from '../helpers/index';
 import { redirectAct } from '../Redux/Actions';
 
-const ButtonLogin = (props) => {
-  const { email, password, shouldRedirect } = props;
+const ButtonLogin = ({ email, password, shouldRedirect }) => {
   const HandleButton = () => {
     const dataToStorage = {
       email,
