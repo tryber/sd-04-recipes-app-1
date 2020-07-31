@@ -1,11 +1,11 @@
 import React from 'react';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
+import { fireEvent } from '@testing-library/react';
 
 import renderWithRedux from './renderWithRedux';
 
 import App from './App';
-import { fireEvent } from '@testing-library/react';
 
 // usar essa função para renderizar os componentes
 const renderWithRouter = (initialEntries = ['/']) => (
@@ -122,7 +122,6 @@ describe('Login page', () => {
     expect(submitButton).not.toBeDisabled();
 
     fireEvent.click(submitButton);
-    const user = { email: email.value };
 
     expect(history.path).toBe('/comidas');
   });
