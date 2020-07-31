@@ -11,8 +11,8 @@ function reducerList(state = INITIAL_STATE, action) {
       return { ...state, isFetching: true };
     case 'CHANGE_INPUT':
       return { ...state, [action.name]: action.value };
-      case 'REDIRECT':
-        return { ...state, shouldRedirect: true };
+    case 'REDIRECT':
+      return { ...state, shouldRedirect: true };
     default:
       return { ...state };
   }
